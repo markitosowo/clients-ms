@@ -12,12 +12,9 @@ datasource db {
   provider = "sqlite"
 }
 
-
-model Tienda {
-  id        Int     @id @default(autoincrement())
-  name      String  
-  email    Float    @unique
-  phone   String?  
-  address  String?
-  createdAt DateTime @default(now())
+model Category {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime @default(now())
 }
